@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z "$1" || "$1" != *-* ]]; then
+  echo "ERROR: Missing parameter. Please provide the issue number, e.g. DEX-123."
+  exit 1
+fi
+
+url="https://ag5.myjetbrains.com/youtrack/issue/$1"
+open "$url"
